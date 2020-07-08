@@ -263,6 +263,7 @@ class CefBrowserOsr extends CefBrowser_N implements CefRenderHandler {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 canvas_.display();
+                
             }
         });
     }
