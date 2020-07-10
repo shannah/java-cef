@@ -22,6 +22,15 @@ public interface CefRenderHandler {
      * @return The view rectangle.
      */
     public Rectangle getViewRect(CefBrowser browser);
+    
+    /**
+     * Retrieve the screen info.
+     * @param browser The browser generating the event.
+     * @param screenInfo The screenInfo
+     * @return True if this callback was handled.  False to fallback to defaults.
+     */
+    public boolean getScreenInfo(CefBrowser browser, CefScreenInfo screenInfo);
+    
     /**
      * Retrieve the screen point for the specified view point.
      * @param browser The browser generating the event.

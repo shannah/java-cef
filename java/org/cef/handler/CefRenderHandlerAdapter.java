@@ -28,6 +28,11 @@ public abstract class CefRenderHandlerAdapter implements CefRenderHandler {
     }
 
     @Override
+    public boolean getScreenInfo(CefBrowser browser, CefScreenInfo screenInfo) {
+        return false;
+    }
+    
+    @Override
     public Point getScreenPoint(CefBrowser browser, Point viewPoint) {
         return new Point(0, 0);
     }

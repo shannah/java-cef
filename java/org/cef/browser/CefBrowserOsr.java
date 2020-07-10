@@ -35,6 +35,7 @@ import java.nio.ByteBuffer;
 
 import javax.swing.MenuSelectionManager;
 import javax.swing.SwingUtilities;
+import org.cef.handler.CefScreenInfo;
 
 /**
  * This class represents an off-screen rendered browser.
@@ -306,5 +307,10 @@ class CefBrowserOsr extends CefBrowser_N implements CefRenderHandler {
             // OSR windows cannot be reparented after creation.
             setFocus(true);
         }
+    }
+
+    @Override
+    public boolean getScreenInfo(CefBrowser browser, CefScreenInfo screenInfo) {
+        return false;
     }
 }

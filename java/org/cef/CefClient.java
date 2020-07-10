@@ -57,6 +57,7 @@ import java.util.HashMap;
 import java.util.Vector;
 
 import javax.swing.SwingUtilities;
+import org.cef.handler.CefScreenInfo;
 
 /**
  * Client that owns a browser and renderer.
@@ -783,5 +784,10 @@ public class CefClient extends CefClientHandler
         CefWindowHandler realHandler = browser.getWindowHandler();
         if (realHandler != null)
             realHandler.onMouseEvent(browser, event, screenX, screenY, modifier, button);
+    }
+
+    @Override
+    public boolean getScreenInfo(CefBrowser arg0, CefScreenInfo arg1) {
+        return false;
     }
 }
